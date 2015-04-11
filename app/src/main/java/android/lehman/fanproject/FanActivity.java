@@ -1,7 +1,6 @@
 package android.lehman.fanproject;
 
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,7 +8,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 
 public class FanActivity extends ActionBarActivity {
@@ -51,7 +52,7 @@ public class FanActivity extends ActionBarActivity {
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends Fragment {
+    public class PlaceholderFragment extends Fragment {
 
         public PlaceholderFragment() {
         }
@@ -60,6 +61,10 @@ public class FanActivity extends ActionBarActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_fan, container, false);
+            ImageView btn_rotate = (ImageView)findViewById(R.id.imageFan);
+            Animation rotation = AnimationUtils.loadAnimation(getActivity(), R.anim.rotate);
+            rotation.setFillAfter(true);
+            btn_rotate.startAnimation(rotation);
             return rootView;
         }
     }
