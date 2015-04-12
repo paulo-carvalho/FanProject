@@ -3,12 +3,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".FanActivity$PlaceholderFragment">
+    tools:context=".FanFragment">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageFan"
-        android:src="@drawable/rotor"
-    />
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/imageStick"
+            android:src="@drawable/stick"
+            android:layout_marginTop="160dp"
+            />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:id="@+id/imageFan"
+            android:src="@drawable/rotor"
+            />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/base"
+            android:layout_gravity="bottom">
+
+        </FrameLayout>
+
+    </FrameLayout>
 </LinearLayout>

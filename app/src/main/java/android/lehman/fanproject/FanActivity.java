@@ -20,8 +20,8 @@ public class FanActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fan);
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+            getFragmentManager().beginTransaction()
+                    .add(R.id.container, new FanFragment())
                     .commit();
         }
     }
@@ -47,25 +47,5 @@ public class FanActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() {
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_fan, container, false);
-            ImageView btn_rotate = (ImageView)findViewById(R.id.imageFan);
-            Animation rotation = AnimationUtils.loadAnimation(getActivity(), R.anim.rotate);
-            rotation.setFillAfter(true);
-            btn_rotate.startAnimation(rotation);
-            return rootView;
-        }
     }
 }
