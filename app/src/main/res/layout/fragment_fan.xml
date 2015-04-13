@@ -12,7 +12,7 @@
 
         <ImageView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/imageStick"
             android:src="@drawable/stick"
             android:layout_marginTop="160dp"
@@ -26,13 +26,39 @@
             android:src="@drawable/rotor"
             />
 
-        <FrameLayout
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="100dp"
             android:background="@drawable/base"
-            android:layout_gravity="bottom">
+            android:layout_gravity="bottom"
+            android:orientation="horizontal">
 
-        </FrameLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/on"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/off" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/speed1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/speed2" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/speed3"/>
+
+        </LinearLayout>
 
     </FrameLayout>
 </LinearLayout>
