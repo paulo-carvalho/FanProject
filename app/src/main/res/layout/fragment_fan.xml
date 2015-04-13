@@ -12,7 +12,7 @@
 
         <ImageView
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/imageStick"
             android:src="@drawable/stick"
             android:layout_marginTop="160dp"
@@ -36,30 +36,35 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:src="@drawable/on"
                 android:id="@+id/buttonOn"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:src="@drawable/off"
                 android:id="@+id/buttonOff"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:src="@drawable/speed1"
                 android:id="@+id/buttonSpeedOne"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:src="@drawable/speed2"
                 android:id="@+id/buttonSpeedTwo"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:src="@drawable/speed3"
                 android:id="@+id/buttonSpeedThree"/>
 
