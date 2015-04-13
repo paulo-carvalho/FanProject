@@ -16,6 +16,9 @@ import android.widget.ImageView;
  */
 public class FanFragment extends Fragment {
 
+    private ImageView fanRotor;
+    private Animation rotation;
+
     public FanFragment () {
 
     }
@@ -25,14 +28,51 @@ public class FanFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_fan, container, false);
 
-        ImageView fanRotor = (ImageView)rootView.findViewById(R.id.imageFan);
-        Animation rotation = AnimationUtils.loadAnimation(getActivity(), R.anim.rotate);
+        fanRotor = (ImageView)rootView.findViewById(R.id.imageFan);
+        rotation = AnimationUtils.loadAnimation(getActivity(), R.anim.rotate);
         rotation.setFillAfter(true);
-        fanRotor.startAnimation(rotation);
 
         ImageView buttonOn = (ImageView)rootView.findViewById(R.id.buttonOn);
-        buttonOn.setOnClickListener((v) -> {
-            
+        buttonOn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fanRotor.startAnimation(rotation);
+            }
+        });
+
+        ImageView buttonOff = (ImageView)rootView.findViewById(R.id.buttonOff);
+        buttonOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fanRotor.clearAnimation();
+            }
+        });
+
+        ImageView buttonSpeedOne = (ImageView)rootView.findViewById(R.id.buttonSpeedOne);
+        buttonSpeedOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rotation.setDuration(750);
+                fanRotor.startAnimation(rotation);
+            }
+        });
+
+        ImageView buttonSpeedTwo = (ImageView)rootView.findViewById(R.id.buttonSpeedTwo);
+        buttonSpeedTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rotation.setDuration(500);
+                fanRotor.startAnimation(rotation);
+            }
+        });
+
+        ImageView buttonSpeedThree = (ImageView)rootView.findViewById(R.id.buttonSpeedThree);
+        buttonSpeedThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                rotation.setDuration(250);
+                fanRotor.startAnimation(rotation);
+            }
         });
         return rootView;
     }
