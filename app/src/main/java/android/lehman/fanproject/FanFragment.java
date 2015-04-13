@@ -1,6 +1,7 @@
 package android.lehman.fanproject;
 
 import android.app.Fragment;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,10 +24,16 @@ public class FanFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_fan, container, false);
-        ImageView btn_rotate = (ImageView)rootView.findViewById(R.id.imageFan);
+
+        ImageView fanRotor = (ImageView)rootView.findViewById(R.id.imageFan);
         Animation rotation = AnimationUtils.loadAnimation(getActivity(), R.anim.rotate);
         rotation.setFillAfter(true);
-        btn_rotate.startAnimation(rotation);
+        fanRotor.startAnimation(rotation);
+
+        ImageView buttonOn = (ImageView)rootView.findViewById(R.id.buttonOn);
+        buttonOn.setOnClickListener((v) -> {
+            
+        });
         return rootView;
     }
 }

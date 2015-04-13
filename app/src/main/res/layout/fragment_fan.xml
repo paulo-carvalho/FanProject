@@ -36,27 +36,32 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/on"/>
+                android:src="@drawable/on"
+                android:id="@+id/buttonOn"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/off" />
+                android:src="@drawable/off"
+                android:id="@+id/buttonOff"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/speed1" />
+                android:src="@drawable/speed1"
+                android:id="@+id/buttonSpeedOne"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/speed2" />
+                android:src="@drawable/speed2"
+                android:id="@+id/buttonSpeedTwo"/>
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/speed3"/>
+                android:src="@drawable/speed3"
+                android:id="@+id/buttonSpeedThree"/>
 
         </LinearLayout>
 
